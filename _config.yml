@@ -1,0 +1,49 @@
+# Site wide configuration
+title: Ian's Blog
+locale: en_US
+description: "Thoughts, stories and ideas."
+logo: 
+search: true
+url: http://ianliew.com
+
+# Jekyll configuration
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  use_coderay: false
+
+mathjax: true
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+# Site owner
+owner:
+  name: Ian Liew
+  avatar: bio-photo.jpg
+  email: i@ianliew.com
+  linkedin: ianliew
+  github: ianliew
+  stackexchange: http://stackoverflow.com/users/5233529/ianliew
+  twitter: ianliew_
+  instagram: ian.liew
+  500px: ianliew
+  disqus-shortname: 'ianliewsblog'
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:

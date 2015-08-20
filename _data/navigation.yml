@@ -1,0 +1,16 @@
+# Site navigation links
+
+- title: Home
+  url: /
+
+- title: Blog
+  url: /
+
+- title: Search
+  url: /pages/search.html
+
+- title: About
+  url: /pages/about.html
+
+- title: Contact
+  url: /pages/contact.html
