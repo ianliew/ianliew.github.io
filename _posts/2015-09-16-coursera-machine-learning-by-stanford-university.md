@@ -11,10 +11,10 @@ share: true
 
 > If you've worked all the way through this course, you should now consider yourself an expert in Machine Learning
 
-Probably not make that claim yet... But it's been an interesting journey. To recap...
+Probably not gonna make that claim yet... But it's been an interesting journey. To recap...
 
 1. Signed up with Coursera on June 23rd but did nothing with it
-2. Enrolled in this critically acclaimed ML course by Andrew Ng
+2. Enrolled in the critically acclaimed Machine Language course by Andrew Ng
 3. Digging up fragmented memories of linear algebra and calculus which fortunately have only been tucked away and not conveniently forgotten
 4. First real Linear Regression assignment on Week 2 - completed 8 Aug
 5. As [Ronald](https://www.linkedin.com/pulse/machine-learning-hard-ronald-widha-sunarno) put it - got slammed hard by Neural Networks assignment on Week 5 - completed 30 Aug
@@ -33,3 +33,11 @@ And the results:
 **Special Applications** - recommender system, large scale machine learning (map-reduce / on-line learning)
 
 **Building a ML System** - bias/ variances, regularization, evaluate learning algorithms, learning curves, error analysis, ceiling analysis
+
+## What's Next?
+
+This course has provided a good firm foundation on the concepts and idea of Machine Learning and Predictive Analytics. However these are also very *academic* and the tools used are quite *rough*.
+
+As Predictive Analytics and other types of advanced analytics technology are becoming major factors in the analytics market, we have big vendors providing enterprise grade advanced analytics platform with an easy(-ier) and friendly(-ier) user interface.
+
+Having said that, my next step would still be venturing into R Programming. Because, [10 reasons why you should learn R](http://www.r-bloggers.com/10-reasons-why-you-should-learn-r/)
