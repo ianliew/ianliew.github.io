@@ -5,11 +5,10 @@ categories: blog
 excerpt: "If I were interviewing you for a Data Mining position what would be the top 10 algorithms I would expect you to know in order of priority?"
 tags: [Analytics, Machine Learning]
 date: 2015-04-15
+link: http://www.quora.com/What-are-the-top-10-data-mining-or-machine-learning-algorithms/answer/Xavier-Amatriain
 comments: true
 share: true
 ---
-
-From [Quora - What are the top 10 data mining or machine learning algorithms?](http://www.quora.com/What-are-the-top-10-data-mining-or-machine-learning-algorithms/answer/Xavier-Amatriain)
 
 > If I were interviewing you for a Data Mining position what would be the top 10 algorithms I would expect you to know in order of priority?
 
