@@ -33,4 +33,3 @@ And the results:
 **Special Applications** - recommender system, large scale machine learning (map-reduce / on-line learning)
 
 **Building a ML System** - bias/ variances, regularization, evaluate learning algorithms, learning curves, error analysis, ceiling analysis
-
