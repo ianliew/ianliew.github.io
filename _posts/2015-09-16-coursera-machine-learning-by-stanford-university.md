@@ -14,7 +14,7 @@ share: true
 Probably not gonna make that claim yet, but the journey has been an interesting one. To recap...
 
 1. Signed up with Coursera on June 23rd but did nothing with it.
-2. Enrolled in the critically acclaimed Machine Language course by Andrew Ng.
+2. Enrolled in the critically acclaimed [Machine Language](https://www.coursera.org/learn/machine-learning/home/welcome) course by Andrew Ng.
 3. Digging up fragmented memories of linear algebra and calculus which fortunately have only been tucked away and not conveniently forgotten.
 4. First real Linear Regression assignment on Week 2 - completed Aug 8th.
 5. Got slammed hard by Neural Networks assignment on Week 5 - completed Aug 30th.
