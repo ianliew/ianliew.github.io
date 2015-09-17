@@ -17,7 +17,7 @@ Probably not gonna make that claim yet, but the journey has been an interesting 
 2. Enrolled in the critically acclaimed Machine Language course by Andrew Ng,
 3. Digging up fragmented memories of linear algebra and calculus which fortunately have only been tucked away and not conveniently forgotten.
 4. First real Linear Regression assignment on Week 2 - completed Aug 8th.
-5. As [Ronald](https://www.linkedin.com/pulse/machine-learning-hard-ronald-widha-sunarno) put it - got slammed hard by Neural Networks assignment on Week 5 - completed Aug 30th.
+5. Got slammed hard by Neural Networks assignment on Week 5 - completed Aug 30th.
 6. Sped through the rest of the content and finishing the course 2.5 weeks later.
 
 And the results:
