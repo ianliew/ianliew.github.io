@@ -41,3 +41,7 @@ This course has provided a good firm foundation on the concepts and ideas of Mac
 As Predictive Analytics and other types of advanced analytics technology are becoming major factors in the analytics market, we have big vendors providing enterprise grade advanced analytics platforms that are more approachable for non propeller heads.
 
 Having said that, my next step would still be leaning towards venturing into R Programming. Because... [10 reasons why you should learn R](http://www.r-bloggers.com/10-reasons-why-you-should-learn-r/).
+
+### Notes / Other Sources
+
+[Machine learning notes from holehouse.org](http://www.holehouse.org/mlclass/index.html)
