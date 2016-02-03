@@ -10,4 +10,4 @@ comments: true
 share: true
 ---
 
-> "maturity of mind is the capacity to endure uncertainty ... uncertainty is part of life, but it doesn’t have to be an anxiety-inducing, momentum crippling experience”.
+> maturity of mind is the capacity to endure uncertainty ... uncertainty is part of life, but it doesn’t have to be an anxiety-inducing, momentum crippling experience.
