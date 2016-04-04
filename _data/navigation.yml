@@ -7,10 +7,10 @@
   url: /
 
 - title: Search
-  url: /pages/search.html
+  url: /pages/search
 
 - title: About
-  url: /pages/about.html
+  url: /pages/about
 
 - title: Contact
-  url: /pages/contact.html
+  url: /pages/contact
