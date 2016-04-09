@@ -9,6 +9,9 @@
 - title: Search
   url: /pages/search
 
+- title: Tags
+  url: /pages/tags
+
 - title: About
   url: /pages/about
 
