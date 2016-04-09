@@ -4,7 +4,7 @@ locale: en_US
 description: "Thoughts, stories and ideas."
 logo: 
 search: true
-url: http://ianliew.com
+url: http://www.ianliew.com
 
 # Jekyll configuration
 permalink:   /:categories/:title/
