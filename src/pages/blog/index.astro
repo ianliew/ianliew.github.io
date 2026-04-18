@@ -1,0 +1,90 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Collect all unique tags
+const allTags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
+
+const url = Astro.url;
+const activeTag = url.searchParams.get('tag') ?? null;
+const filtered = activeTag ? posts.filter((p) => p.data.tags.includes(activeTag)) : posts;
+---
+
+<Base title="Blog — Ian Liew" description="Writing by Ian Liew on data, ML, and ideas.">
+  <div class="max-w-2xl mx-auto px-6 pt-28 pb-16">
+    <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-3">Writing</p>
+    <h1 class="text-3xl font-light text-gray-900 dark:text-gray-50 tracking-tight mb-2">
+      All Posts
+    </h1>
+    <p class="text-xs text-gray-400 dark:text-gray-500 mb-8">{posts.length} posts</p>
+
+    {/* Tag filter */}
+    {allTags.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-10">
+        <a
+          href="/blog"
+          class:list={[
+            'text-xs px-3 py-1 transition-colors',
+            !activeTag
+              ? 'bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900'
+              : 'border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-gray-400',
+          ]}
+        >
+          All
+        </a>
+        {allTags.map((tag) => (
+          <a
+            href={`/blog/tags/${tag}`}
+            class:list={[
+              'text-xs px-3 py-1 transition-colors',
+              activeTag === tag
+                ? 'bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900'
+                : 'border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:border-gray-400',
+            ]}
+          >
+            {tag}
+          </a>
+        ))}
+      </div>
+    )}
+
+    {/* Post list */}
+    <div class="border-t border-gray-100 dark:border-gray-800">
+      {filtered.map((post) => {
+        const formatted = post.data.date.toLocaleDateString('en-AU', { year: 'numeric', month: 'short' });
+        const wordCount = post.body.split(/\s+/).length;
+        const readTime = Math.max(1, Math.round(wordCount / 200));
+        return (
+          <a
+            href={`/blog/${post.slug}`}
+            class="group flex justify-between items-baseline gap-4 py-4 border-b border-gray-100 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 transition-colors"
+          >
+            <div class="min-w-0">
+              <p class="text-sm font-medium text-gray-900 dark:text-gray-50 group-hover:opacity-70 transition-opacity mb-1">
+                {post.data.title}
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {post.data.tags.slice(0, 2).map((tag) => (
+                  <span class="text-xs text-gray-400 dark:text-gray-500">{tag}</span>
+                ))}
+              </div>
+            </div>
+            <div class="flex items-center gap-4 flex-shrink-0">
+              <span class="text-xs text-gray-300 dark:text-gray-600">{readTime} min</span>
+              <time class="text-xs text-gray-300 dark:text-gray-600 whitespace-nowrap" datetime={post.data.date.toISOString()}>
+                {formatted}
+              </time>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    {filtered.length === 0 && (
+      <p class="text-sm text-gray-400 dark:text-gray-500 py-8">No posts for this tag.</p>
+    )}
+  </div>
+</Base>
