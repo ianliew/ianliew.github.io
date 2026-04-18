@@ -1,0 +1,27 @@
+---
+const year = new Date().getFullYear();
+const links = [
+  { label: 'GitHub', href: 'https://github.com/ianliew' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/ianliew' },
+  { label: 'Twitter', href: 'https://twitter.com/ianliew_' },
+  { label: 'Email', href: 'mailto:i@ianliew.com' },
+];
+---
+
+<footer class="border-t border-gray-200 dark:border-gray-800 mt-24">
+  <div class="max-w-3xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <span class="text-xs text-gray-400 dark:text-gray-600">© {year} Ian Liew</span>
+    <div class="flex items-center gap-5">
+      {links.map(({ label, href }) => (
+        <a
+          href={href}
+          target={href.startsWith('http') ? '_blank' : undefined}
+          rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+          class="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 transition-colors"
+        >
+          {label}
+        </a>
+      ))}
+    </div>
+  </div>
+</footer>

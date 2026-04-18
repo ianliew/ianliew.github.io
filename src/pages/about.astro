@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="About — Ian Liew" description="About Ian Liew — software engineer based in Melbourne.">
+  <div class="max-w-2xl mx-auto px-6 pt-28 pb-16">
+    <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-8">About</p>
+
+    <h1 class="text-3xl font-light text-gray-900 dark:text-gray-50 tracking-tight mb-10">Ian Liew</h1>
+
+    {/* TODO: Replace with real content */}
+    <div class="space-y-5 text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-12">
+      <p>
+        I'm a software engineer based in Melbourne, Australia. I work at the intersection of data, machine learning, and product — building systems that turn information into action.
+      </p>
+      <p>
+        Currently at <strong class="text-gray-900 dark:text-gray-50">[Company]</strong>. Previously at [Company].
+      </p>
+      <p>
+        I studied at [University]. Outside of work I [hobbies / interests].
+      </p>
+    </div>
+
+    <div class="border-t border-gray-100 dark:border-gray-800 pt-8">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-4">Links</p>
+      <div class="flex flex-wrap gap-4">
+        {[
+          { label: 'GitHub', href: 'https://github.com/ianliew' },
+          { label: 'LinkedIn', href: 'https://linkedin.com/in/ianliew' },
+          { label: 'Twitter', href: 'https://twitter.com/ianliew_' },
+          { label: 'Email', href: 'mailto:i@ianliew.com' },
+        ].map(({ label, href }) => (
+          <a href={href} target="_blank" rel="noopener noreferrer"
+             class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 underline underline-offset-2 transition-colors">
+            {label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</Base>

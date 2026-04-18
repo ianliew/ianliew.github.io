@@ -1,0 +1,77 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+const navLinks = [
+  { label: 'About', href: '/about' },
+  { label: 'Work', href: '/work' },
+  { label: 'Blog', href: '/blog' },
+];
+const pathname = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+  <nav class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="/" class="text-xs font-bold tracking-[0.2em] uppercase text-gray-900 dark:text-gray-50 hover:opacity-70 transition-opacity">
+      Ian Liew
+    </a>
+
+    {/* Desktop nav */}
+    <div class="hidden sm:flex items-center gap-6">
+      {navLinks.map(({ label, href }) => (
+        <a
+          href={href}
+          class:list={[
+            'text-xs font-medium transition-colors',
+            pathname.startsWith(href)
+              ? 'text-gray-900 dark:text-gray-50'
+              : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50',
+          ]}
+        >
+          {label}
+        </a>
+      ))}
+      <ThemeToggle />
+    </div>
+
+    {/* Mobile: toggle + hamburger */}
+    <div class="flex sm:hidden items-center gap-4">
+      <ThemeToggle />
+      <button id="mobile-menu-btn" aria-label="Open menu" class="text-gray-500 dark:text-gray-400">
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  {/* Mobile menu */}
+  <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+    {navLinks.map(({ label, href }) => (
+      <a
+        href={href}
+        class="block px-6 py-3 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50 border-b border-gray-100 dark:border-gray-800 last:border-0"
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden', isOpen);
+    hamburger?.classList.toggle('hidden', !isOpen);
+    closeIcon?.classList.toggle('hidden', isOpen);
+  });
+</script>

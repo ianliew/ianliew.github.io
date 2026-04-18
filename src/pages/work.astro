@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+// TODO: Replace with real projects
+const projects = [
+  {
+    title: 'Project Title',
+    description: 'Short description of what this project does, the problem it solves, and the technologies used.',
+    tags: ['ML', 'Python', 'FastAPI'],
+    href: 'https://github.com/ianliew',
+  },
+  {
+    title: 'Project Title',
+    description: 'Short description of what this project does, the problem it solves, and the technologies used.',
+    tags: ['Data', 'SQL', 'dbt'],
+    href: 'https://github.com/ianliew',
+  },
+  {
+    title: 'Project Title',
+    description: 'Short description of what this project does, the problem it solves, and the technologies used.',
+    tags: ['Analytics', 'Tableau'],
+    href: 'https://github.com/ianliew',
+  },
+  {
+    title: 'Project Title',
+    description: 'Short description of what this project does, the problem it solves, and the technologies used.',
+    tags: ['Web', 'TypeScript'],
+    href: 'https://github.com/ianliew',
+  },
+];
+---
+
+<Base title="Work — Ian Liew" description="Projects and work by Ian Liew.">
+  <div class="max-w-2xl mx-auto px-6 pt-28 pb-16">
+    <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-8">Work</p>
+    <h1 class="text-3xl font-light text-gray-900 dark:text-gray-50 tracking-tight mb-4">Projects</h1>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-10">
+      {/* TODO: Update this description */}
+      A selection of things I've built.
+    </p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {projects.map((p) => <ProjectCard {...p} />)}
+    </div>
+  </div>
+</Base>

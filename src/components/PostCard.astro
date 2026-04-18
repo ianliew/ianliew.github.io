@@ -1,0 +1,25 @@
+---
+import { type CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, date, excerpt, tags } = post.data;
+const formatted = date.toLocaleDateString('en-AU', { year: 'numeric', month: 'short' });
+---
+
+<a href={`/blog/${post.slug}`} class="group flex justify-between items-baseline gap-4 py-4 border-b border-gray-100 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 transition-colors">
+  <div class="min-w-0">
+    <p class="text-sm font-medium text-gray-900 dark:text-gray-50 group-hover:opacity-70 transition-opacity mb-1 truncate">
+      {title}
+    </p>
+    {excerpt && (
+      <p class="text-xs text-gray-400 dark:text-gray-500 truncate">{excerpt}</p>
+    )}
+  </div>
+  <time class="text-xs text-gray-300 dark:text-gray-600 whitespace-nowrap flex-shrink-0" datetime={date.toISOString()}>
+    {formatted}
+  </time>
+</a>
