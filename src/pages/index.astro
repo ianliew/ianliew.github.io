@@ -14,13 +14,11 @@ const projects = [
     title: 'Agentic AI for Investigative Intelligence',
     description: 'Designing next-generation multi-agent AI ecosystems that augment human judgment and scale investigative capacity — built to be adopted incrementally as organisations mature.',
     tags: ['Agentic AI', 'Multi-agent Systems', 'AI Architecture'],
-    href: 'https://github.com/ianliew',
   },
   {
     title: 'Logistics Pricing Platform',
     description: 'Co-founded and prototyped a cloud platform connecting shippers and carriers with real-time quotes, targeting deadhead cost recovery for logistics companies.',
     tags: ['Co-founder', 'Cloud', 'SaaS'],
-    href: 'https://github.com/ianliew',
   },
 ];
 ---
@@ -28,11 +26,11 @@ const projects = [
 <Base title="Ian Liew">
 
   {/* Hero */}
-  <section class="max-w-3xl mx-auto px-6 pt-36 pb-20 border-b border-gray-100 dark:border-gray-800">
+  <section class="max-w-3xl mx-auto px-6 pt-24 sm:pt-36 pb-12 sm:pb-20 border-b border-gray-100 dark:border-gray-800">
     <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-5">
       Hong Kong SAR
     </p>
-    <h1 class="text-4xl sm:text-5xl font-light text-gray-900 dark:text-gray-50 leading-tight tracking-tight mb-5">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-900 dark:text-gray-50 leading-tight tracking-tight mb-5">
       I build the systems that<br />make transformation real.
     </h1>
     <div class="w-10 h-px bg-gray-900 dark:bg-gray-50 mb-6"></div>
@@ -50,7 +48,7 @@ const projects = [
   </section>
 
   {/* About */}
-  <section id="about" class="max-w-3xl mx-auto px-6 py-20 border-b border-gray-100 dark:border-gray-800">
+  <section id="about" class="max-w-3xl mx-auto px-6 py-12 sm:py-20 border-b border-gray-100 dark:border-gray-800">
     <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-6">About</p>
     <div class="flex flex-col sm:flex-row gap-8 sm:gap-12">
       <div class="flex-1">
@@ -68,7 +66,7 @@ const projects = [
   </section>
 
   {/* Featured Work */}
-  <section id="work" class="max-w-3xl mx-auto px-6 py-20 border-b border-gray-100 dark:border-gray-800">
+  <section id="work" class="max-w-3xl mx-auto px-6 py-12 sm:py-20 border-b border-gray-100 dark:border-gray-800">
     <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-6">Featured Work</p>
     <div class="grid sm:grid-cols-2 gap-4 mb-6">
       {projects.map((p) => <ProjectCard {...p} />)}
@@ -79,7 +77,7 @@ const projects = [
   </section>
 
   {/* Latest Posts */}
-  <section id="blog" class="max-w-3xl mx-auto px-6 py-20">
+  <section id="blog" class="max-w-3xl mx-auto px-6 py-12 sm:py-20">
     <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-6">Latest Posts</p>
     <div class="border-t border-gray-100 dark:border-gray-800">
       {latestPosts.map((post) => <PostCard post={post} />)}

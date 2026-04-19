@@ -14,7 +14,7 @@ const filtered = activeTag ? posts.filter((p) => p.data.tags.includes(activeTag)
 ---
 
 <Base title="Blog — Ian Liew" description="Writing by Ian Liew on data, ML, and ideas.">
-  <div class="max-w-2xl mx-auto px-6 pt-28 pb-16">
+  <div class="max-w-2xl mx-auto px-6 pt-20 sm:pt-28 pb-12 sm:pb-16">
     <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-3">Writing</p>
     <h1 class="text-3xl font-light text-gray-900 dark:text-gray-50 tracking-tight mb-2">
       All Posts
@@ -72,7 +72,7 @@ const filtered = activeTag ? posts.filter((p) => p.data.tags.includes(activeTag)
                 ))}
               </div>
             </div>
-            <div class="flex items-center gap-4 flex-shrink-0">
+            <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
               <span class="text-xs text-gray-300 dark:text-gray-600">{readTime} min</span>
               <time class="text-xs text-gray-300 dark:text-gray-600 whitespace-nowrap" datetime={post.data.date.toISOString()}>
                 {formatted}
