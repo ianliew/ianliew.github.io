@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base title="About — Ian Liew" description="About Ian Liew — Director at Deloitte, solutions architect, AI transformation leader based in Hong Kong.">
-  <div class="max-w-2xl mx-auto px-6 pt-28 pb-16">
+  <div class="max-w-2xl mx-auto px-6 pt-20 sm:pt-28 pb-12 sm:pb-16">
     <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-8">About</p>
 
     <h1 class="text-3xl font-light text-gray-900 dark:text-gray-50 tracking-tight mb-10">Ian Liew</h1>
@@ -27,10 +27,10 @@ import Base from '../layouts/Base.astro';
       <p class="text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 dark:text-gray-500 mb-4">Links</p>
       <div class="flex flex-wrap gap-4">
         {[
-          { label: 'GitHub', href: 'https://github.com/ianliew' },
           { label: 'LinkedIn', href: 'https://linkedin.com/in/ianliew' },
-          { label: 'Twitter', href: 'https://twitter.com/ianllw' },
-          { label: 'Email', href: 'mailto:zzz@ianliew.com' },
+          { label: 'GitHub', href: 'https://github.com/ianliew' },
+          { label: 'Twitter', href: 'https://twitter.com/ianliew_' },
+          { label: 'Email', href: 'mailto:i@ianliew.com' },
         ].map(({ label, href }) => (
           <a href={href} target="_blank" rel="noopener noreferrer"
              class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-50 underline underline-offset-2 transition-colors">
